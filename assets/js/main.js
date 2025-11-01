@@ -243,3 +243,109 @@
   new PureCounter();
 
 })();
+
+
+
+// Portfolio/Notes Filter Functionality
+document.addEventListener('DOMContentLoaded', function() {
+  // Get all filter buttons in the notes section
+  const notesSection = document.querySelector('#notes');
+  if (notesSection) {
+    const filterButtons = notesSection.querySelectorAll('#portfolio-flters li');
+    const portfolioItems = notesSection.querySelectorAll('.portfolio-item');
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        // Remove active class from all buttons
+        filterButtons.forEach(btn => btn.classList.remove('filter-active'));
+        
+        // Add active class to clicked button
+        this.classList.add('filter-active');
+        
+        // Get filter value
+        const filterValue = this.getAttribute('data-filter');
+        
+        // Show/hide items based on filter
+        portfolioItems.forEach(item => {
+          if (filterValue === '*') {
+            // Show all items
+            item.style.display = 'block';
+          } else {
+            // Show only matching items
+            if (item.classList.contains(filterValue.substring(1))) {
+              item.style.display = 'block';
+            } else {
+              item.style.display = 'none';
+            }
+          }
+        });
+      });
+    });
+  }
+});
+
+
+
+
+
+
+// Portfolio/Notes Filter Functionality for both sections
+document.addEventListener('DOMContentLoaded', function() {
+  
+  // Function to setup filters for a section
+  function setupFilters(sectionId, filtersId) {
+    const section = document.querySelector(sectionId);
+    if (section) {
+      const filterButtons = section.querySelectorAll(filtersId + ' li');
+      const portfolioItems = section.querySelectorAll('.portfolio-item');
+
+      filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          // Remove active class from all buttons in this section
+          filterButtons.forEach(btn => btn.classList.remove('filter-active'));
+          
+          // Add active class to clicked button
+          this.classList.add('filter-active');
+          
+          // Get filter value
+          const filterValue = this.getAttribute('data-filter');
+          
+          // Show/hide items based on filter
+          portfolioItems.forEach(item => {
+            if (filterValue === '*') {
+              // Show all items
+              item.style.display = '';
+              item.style.opacity = '1';
+            } else {
+              // Show only matching items
+              if (item.classList.contains(filterValue.substring(1))) {
+                item.style.display = '';
+                item.style.opacity = '1';
+              } else {
+                item.style.display = 'none';
+                item.style.opacity = '0';
+              }
+            }
+          });
+        });
+      });
+      
+      // Trigger click on first filter to show initial state
+      if (filterButtons.length > 0) {
+        filterButtons[0].click();
+      }
+    }
+  }
+  
+  // Setup filters for certifications section (uses #portfolio-flters)
+  setupFilters('#portfolio', '#portfolio-flters');
+  
+  // Setup filters for notes section (uses #notes-flters)
+  setupFilters('#notes', '#notes-flters');
+});
+
+
+
+
+// atomate
+
