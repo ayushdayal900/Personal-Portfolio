@@ -347,5 +347,72 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-// atomate
 
+
+
+const items = document.querySelectorAll('.gallery-item');
+const modal = document.getElementById('modal');
+const modalImg = document.getElementById('modal-img');
+const close = document.getElementById('close');
+const previewLinks = document.querySelectorAll('.preview-link');
+
+// Preview functionality
+previewLinks.forEach((link, index) => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        const img = items[index].querySelector('img');
+        modal.classList.add('active');
+        modalImg.src = img.src;
+        document.body.style.overflow = 'hidden';
+    });
+});
+
+// Details link functionality (prevent default)
+document.querySelectorAll('.details-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        // Add your details page navigation here
+        console.log('Details link clicked');
+    });
+});
+
+// Close modal
+close.addEventListener('click', closeModal);
+modal.addEventListener('click', function(e) {
+    if (e.target === modal) {
+        closeModal();
+    }
+});
+
+function closeModal() {
+    modal.classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
+
+// Keyboard support
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        closeModal();
+    }
+});
+
+// Smooth scroll animations
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+        }
+    });
+}, observerOptions);
+
+items.forEach(item => {
+    observer.observe(item);
+});
