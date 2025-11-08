@@ -416,3 +416,16 @@ const observer = new IntersectionObserver((entries) => {
 items.forEach(item => {
     observer.observe(item);
 });
+
+
+
+// zoom
+
+function setZoom() {
+  const scale = 0.75;
+  document.body.style.transform = `scale(${scale})`;
+  document.body.style.transformOrigin = "0 0";
+  document.body.style.width = 100 / scale + "%";
+}
+window.addEventListener("load", setZoom);
+window.addEventListener("resize", setZoom);
