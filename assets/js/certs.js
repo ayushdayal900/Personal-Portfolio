@@ -6,6 +6,7 @@
 const certifications = [
   /* ========== IIT Madras ========== */
   { img: "assets/img/portfolio/IITM/General/foundation.png", category: "filter-iitm", title: "IITM - Foundation" },
+  { img: "assets/img/portfolio/IITM/General/Diploma_in_Programming.png", category: "filter-iitm", title: "IITM - Foundation" },
   { img: "assets/img/portfolio/IITM/General/appdev.png", category: "filter-iitm", title: "IITM - App Development" },
   { img: "assets/img/portfolio/IITM/workshops/Dynamic_programming.png", category: "filter-iitm", title: "Dynamic Programming" },
   { img: "assets/img/portfolio/IITM/workshops/Introduction_to_Deploy_ML_Apps_at_Lightning_Speed_using_GCP.png", category: "filter-iitm", title: "GCP ML Apps" },
