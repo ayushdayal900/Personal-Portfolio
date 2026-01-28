@@ -68,19 +68,49 @@ function loadCertifications() {
 
   certifications.forEach(item => {
     container.innerHTML += `
-      <div class="col-lg-4 col-md-6 portfolio-item ${item.category}">
-        <div class="portfolio-wrap">
-          <img src="${item.img}" class="img-fluid" alt="${item.title}">
-          <div class="portfolio-links">
-            <a href="${item.img}" 
-               data-gallery="portfolioGallery" 
-               class="portfolio-lightbox" 
-               title="${item.title}">
-               <i class="bx bx-search-alt"></i>
-            </a>
-          </div>
-        </div>
-      </div>
+<div class="col-lg-4 col-md-6 portfolio-item ${item.category}">
+  <div class="portfolio-wrap"
+       style="
+         background:#ffffff;
+         border-radius:12px;
+         overflow:hidden;
+         box-shadow:0 10px 30px rgba(0,0,0,0.08);
+         transition:all 0.3s ease;
+       "
+       onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 18px 40px rgba(0,0,0,0.15)'"
+       onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.08)'">
+
+    <!-- Title -->
+    <div style="
+         padding:12px;
+         text-align:center;
+         font-weight:600;
+         font-size:15px;
+         background:#f8f9fa;
+         color:#012970;
+         border-bottom:1px solid #eaeaea;
+       ">
+      ${item.title}
+    </div>
+
+    <!-- Image -->
+    <img src="${item.img}"
+         class="img-fluid"
+         alt="${item.title}"
+         style="padding:12px;" />
+
+    <!-- Zoom Button (UNCHANGED) -->
+    <div class="portfolio-links">
+      <a href="${item.img}"
+         data-gallery="portfolioGallery"
+         class="portfolio-lightbox"
+         title="${item.title}">
+        <i class="bx bx-search-alt"></i>
+      </a>
+    </div>
+
+  </div>
+</div>
     `;
   });
 }
