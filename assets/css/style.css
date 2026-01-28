@@ -3,6 +3,39 @@
 * Updated: May 30 2023 with Bootstrap v5.3.0
 */
 
+/* p5.js */
+canvas {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+}
+
+
+.projects-scroll {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 10px;
+
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.project-card {
+  text-wrap: true;
+  width: 420px; /* adjust based on your design */
+  flex-shrink: 0;
+
+  scroll-snap-align: start;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+
+
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -68,7 +101,7 @@ h1, h2, h3, h4, h5, h6 {
   bottom: 0;
   width: 300px;
   transition: all ease-in-out 0.5s;
-  z-index: 9997;
+  z-index: 2;
   padding: 0 15px;
   background: #040b14;
   overflow-y: auto;
