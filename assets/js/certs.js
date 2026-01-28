@@ -12,6 +12,8 @@ const certifications = [
   { img: "assets/img/portfolio/IITM/workshops/Git_Github.png", category: "filter-iitm", title: "Git & GitHub" },
   { img: "assets/img/portfolio/IITM/workshops/Transformers.png", category: "filter-iitm", title: "Transformers Workshop" },
   { img: "assets/img/portfolio/IITM/workshops/mlt.png", category: "filter-iitm", title: "Machine Learning Techniques Workshop" },
+  { img: "assets/img/portfolio/IITM/workshops/Maths_Foundation_of_ML.png", category: "filter-iitm", title: "Mathematical Foundation of Machine Learning Workshop" },
+  { img: "assets/img/portfolio/IITM/workshops/Data_Visualization_Matplotlib_and_Seaborn.png", category: "filter-iitm", title: "Data Visualization by Matplotlib and Seaborn Workshop" },
 
   /* ========== Internships ========== */
   { img: "assets/img/portfolio/Internships/AICTE/aws/Ayush_Prashant_Dayal_aws_internship.png", category: "filter-internships", title: "AWS Internship" },
