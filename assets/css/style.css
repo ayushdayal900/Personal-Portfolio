@@ -1332,7 +1332,7 @@ section {
   /* Thick white padding mimics Polaroid frame */
   padding: 12px 12px 20px 12px; 
   box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-  width: 220px;
+  width: 400px;
   transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease, z-index 0.3s;
   cursor: pointer;
   position: relative;
