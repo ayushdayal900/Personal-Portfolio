@@ -112,7 +112,7 @@ function draw() {
   for (let i = 0; i < particles.length; i++) {
 
     // Current particle.
-    let p = particles[i];o
+    let p = particles[i];
 
     // Set particle color.
     fill(hueBase, 70, 100, p.alpha);
