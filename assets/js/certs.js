@@ -6,15 +6,18 @@
 const certifications = [
   /* ========== IIT Madras ========== */
   { img: "assets/img/portfolio/IITM/General/foundation.png", category: "filter-iitm", title: "IITM - Foundation" },
-  { img: "assets/img/portfolio/IITM/General/Diploma_in_Programming.png", category: "filter-iitm", title: "IITM - Foundation" },
+  { img: "assets/img/portfolio/IITM/General/Diploma_in_Programming.png", category: "filter-iitm", title: "IITM - Diploma In Programming" },
   { img: "assets/img/portfolio/IITM/General/appdev.png", category: "filter-iitm", title: "IITM - App Development" },
+
   { img: "assets/img/portfolio/IITM/workshops/Dynamic_programming.png", category: "filter-iitm", title: "Dynamic Programming" },
   { img: "assets/img/portfolio/IITM/workshops/Introduction_to_Deploy_ML_Apps_at_Lightning_Speed_using_GCP.png", category: "filter-iitm", title: "GCP ML Apps" },
   { img: "assets/img/portfolio/IITM/workshops/Git_Github.png", category: "filter-iitm", title: "Git & GitHub" },
   { img: "assets/img/portfolio/IITM/workshops/Transformers.png", category: "filter-iitm", title: "Transformers Workshop" },
+  { img: "assets/img/portfolio/IITM/workshops/Data_Visualization_Matplotlib_and_Seaborn.png", category: "filter-iitm", title: "Data Visualization by Matplotlib and Seaborn Workshop" },
   { img: "assets/img/portfolio/IITM/workshops/mlt.png", category: "filter-iitm", title: "Machine Learning Techniques Workshop" },
   { img: "assets/img/portfolio/IITM/workshops/Maths_Foundation_of_ML.png", category: "filter-iitm", title: "Mathematical Foundation of Machine Learning Workshop" },
-  { img: "assets/img/portfolio/IITM/workshops/Data_Visualization_Matplotlib_and_Seaborn.png", category: "filter-iitm", title: "Data Visualization by Matplotlib and Seaborn Workshop" },
+  { img: "assets/img/portfolio/IITM/workshops/Introduction_to_HuggingFace_and_HuggingFace_Spaces.png", category: "filter-iitm", title: "Introduction to HuggingFace and HuggingFace_Spaces" },
+  { img: "assets/img/portfolio/IITM/workshops/Making_Interactive_Dashboards_with_Power_BI.png", category: "filter-iitm", title: "Making Interactive Dashboards with Power BI" },
 
   /* ========== Internships ========== */
   { img: "assets/img/portfolio/Internships/AICTE/aws/Ayush_Prashant_Dayal_aws_internship.png", category: "filter-internships", title: "AWS Internship" },
