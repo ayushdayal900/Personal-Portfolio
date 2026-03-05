@@ -59,7 +59,8 @@ const certifications = [
   { img: "assets/img/portfolio/other/udemy/Information_Security.png", category: "filter-mix", title: "Information Security" },
   { img: "assets/img/portfolio/other/udemy/java.png", category: "filter-mix", title: "Java Udemy" },
   { img: "assets/img/portfolio/other/udemy/ml_dl_in_py_and_r.png", category: "filter-mix", title: "ML/DL Python & R" },
-  { img: "assets/img/portfolio/other/udemy/udemy-cpp.png", category: "filter-mix", title: "C++ Udemy" }
+  { img: "assets/img/portfolio/other/udemy/udemy-cpp.png", category: "filter-mix", title: "C++ Udemy" },
+  { img: "assets/img/portfolio/other/extra/blood_donation.jpeg", category: "filter-mix", title: "Blood Donation" }
 ];
 
 /* ========== RENDER ITEMS ========== */
