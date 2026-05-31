@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  # Unique key of the Deployment instance
+  name: portfolio-app
+
+spec:
+  # 3 Pods should exist at all times.
+  replicas: 3
+  
+
+  selector:
+    matchLabels:
+      app: portfolio-app
+
+  template:
+    metadata:
+      labels:
+        # Apply this label to pods and default
+        # the Deployment label selector to this value
+        app: portfolio-app
+
+    spec:
+      containers:
+        - name: portfolio-app
+          # Run this image
+          image: ayushdayal8falcon/personal-portfolio:01
